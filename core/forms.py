@@ -1,11 +1,15 @@
 from django import forms
+from core.models import BmiMeasurement
 
-#inherits Form from forms, imported above
 class BMIForm(forms.Form):
-    # for more on forms, check out python forms documentation
-    """
-    Height is in meters. Weight is in Kg.
-    """
-    name = forms.CharField(required=False)
-    height = forms.FloatField(label="Height in meters", required=True, min_value=0)
-    weight = forms.FloatField(required=True, min_value=0)
+  """
+  Height is in meters. Weight is in kg.
+  """
+  name = forms.CharField(required=False)
+  height = forms.FloatField(label="Height in meters", required=True, min_value=0)
+  weight = forms.FloatField(label="Weight in kg", required=True, min_value=0)
+
+class BMIMeasurementForm(forms.ModelForm):
+  class Meta:
+    model = BmiMeasurement
+    fields = ['height_in_meters', 'weight_in_kilograms', 'measured_at']

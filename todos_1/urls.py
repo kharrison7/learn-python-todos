@@ -15,12 +15,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
+#imports greeting_view
+# from core.views import greeting_view
 from core import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hello/$', views.greeting_view),
-    url(r'^goodbye/$', views.goodbye_view),
-    url(r'^bmi/$', views.bmi),
-    url(r'^measurement/$', views.bmi_measurement),
+    #calls the greeting_view
+    # url(r'^$', greeting_view),
+    url(r'^hello/$',views. greeting_view),
+    url(r'^goodbye/$',views. goodbye_view),
+    url(r'^bmi/$',views. bmi),
 ]
+
+# regular expression
+# ^ begin of string
+# $ end of string
