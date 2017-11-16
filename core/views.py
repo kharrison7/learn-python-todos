@@ -25,6 +25,8 @@ def bmi(request):
   return render(request, "bmi.html", {"form": form})
 
 def bmi_measurement(request):
+    # Fixes error but stops data from being stored.
+  # measurements = BmiMeasurement.objects.order_by("measured_at").all()
   if request.method == "POST":
     form = BMIMeasurementForm(request.POST)
     if form.is_valid():
