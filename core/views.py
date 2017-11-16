@@ -32,7 +32,7 @@ def bmi_measurement(request):
 
       measurements = BmiMeasurement.objects.order_by("measured_at").all()
 
-      return render(request, "measurement_recorded.html", 
+      return render(request, "measurement_recorded.html",
         {"measurements": measurements})
   else:
     measurements = BmiMeasurement.objects.order_by("measured_at").all()
