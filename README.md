@@ -22,3 +22,5 @@ To run the server open the project directory then input:
 python manage.py runserver
 
 Use 'ctrl + d' to exit the python interpreter
+
+Current bug is views.
