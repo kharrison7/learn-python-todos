@@ -23,4 +23,4 @@ python manage.py runserver
 
 Use 'ctrl + d' to exit the python interpreter
 
-Current bug to fix occurs in views.py
+Current bug occurs in views.py
