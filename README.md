@@ -23,4 +23,4 @@ python manage.py runserver
 
 Use 'ctrl + d' to exit the python interpreter
 
-Current issues can be found in views.py
+Current issue can be found in views.py
